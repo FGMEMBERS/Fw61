@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!--
+Hersteller Focke Wulf, 1936
+FW61
+Motor 7-Zylinder Sternmotor Bramo 314 E, 160 PS
+Leergewicht 818 kg
+Max. Startgewicht 950 kg 
+Hoechstgeschwindigkeit 122 km/h
+Reisegeschwindigkeit 90 km/h
+Anfangssteigleistung 3,5 m/s
+Reichweite 230 km
+Dienstgipfelhoehe 3200 m
+-->
+
+<PropertyList>
+ <sim>
+
+  <description>Focke Wulf FW61 (YASIM)</description>
+  <author>Oliver Predelli</author>
+  <status>early production</status>
+  <license>GPL v2</license>
+
+  <flight-model>yasim</flight-model>
+  <aero>Fw61</aero>
+  <fuel-fraction>0.8</fuel-fraction>
+  
+  <startup>
+   <splash-texture>Aircraft/Fw61/Fw61_Air.rgb</splash-texture>
+  </startup>
+
+  <sound>
+   <path>Aircraft/Fw61/Fw61-sound.xml</path>
+  </sound>
+
+  <panel>
+   <visibility archive="n">false</visibility>
+  </panel>
+
+  <model>
+   <path archive="y">Aircraft/Fw61/Models/Fw61.xml</path>
+  </model>
+
+<!-- rechts, oben ,hinten = x, y, z -->
+  
+  <view>
+   <internal archive="y">true</internal>
+   <config>
+     <x-offset-m archive="y">0</x-offset-m>
+     <y-offset-m archive="y">0.55</y-offset-m>
+     <z-offset-m archive="y">0.1</z-offset-m>
+     <pitch-offset-deg>-2</pitch-offset-deg>
+   </config>
+  </view>
+
+  <help>
+    <title>FW61</title>
+    <line></line>
+    <line> The Focke-Wulf Fw 61 was the first fully-controllable helicopter.</line>
+    <line> The first flight was in 1936.</line>
+    <line> The airframe was based on that of the Focke-Wulf Fw 44 Stieglitz</line>
+    <line></line>
+    <line>---------------------------------------------------------------------</line>
+    <line></line>
+    <line> Aircraft control differs from normal helicopters:</line>
+    <line> Start the engine with "}".</line>
+    <line> Carefully increase the engine speed.</line>
+    <line> The aircraft will leave the ground at approx. 1500 rpm.</line>
+    <line> Keep the nose slightly downward and never too high.</line>
+    <line> Reduce the engine speed for landing.</line>
+    <line> But be careful, never reduce it too much.</line>
+  </help>
+
+ </sim>
+
+ <yasim>
+  <Fw61>
+   <pilot-lb>180</pilot-lb>
+  </Fw61>
+ </yasim>
+
+ <consumables>
+  <fuel>
+   <tank n="1">
+    <level-gal_us type="double">0</level-gal_us>
+   </tank>
+  </fuel>
+ </consumables>
+
+</PropertyList>

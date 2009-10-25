@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>Fw61.ac</path>
+
+ <model>
+  <path>Aircraft/Fw61/Models/cockpit.xml</path>
+  <offsets>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </offsets>
+ </model>
+
+<!-- x, y, z = hinten, rechts, oben -->
+
+ <animation>
+  <type>noshadow</type>
+  <object-name>Propeller_spin</object-name>
+  <object-name>Propeller_Scheibe</object-name>
+  <object-name>Rotor_re_spin</object-name>
+  <object-name>Rotor_li_spin</object-name>
+ </animation>
+
+<animation>
+  <type>select</type>
+  <object-name>Propeller</object-name>
+  <condition>
+   <less-than>
+    <property>/rotors/left/rpm</property>
+    <value>100</value>
+   </less-than>
+  </condition>
+ </animation>
+
+
+ <animation>
+  <type>select</type>
+  <object-name>Propeller_Scheibe</object-name>
+  <condition>
+   <greater-than>
+    <property>/rotors/left/rpm</property>
+    <value>100</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>Propeller_spin</object-name>
+  <condition>
+   <greater-than>
+    <property>/rotors/left/rpm</property>
+    <value>100</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>Propeller</object-name>
+  <property>/rotors/left/rpm</property>
+  <factor>-4</factor>
+  <center>
+   <x-m>-3</x-m>
+   <y-m> 0</y-m>
+   <z-m> 0</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>Propeller_spin</object-name>
+  <property>/rotors/left/rpm</property>
+  <factor>-0.01</factor>
+  <center>
+   <x-m>-3</x-m>
+   <y-m> 0</y-m>
+   <z-m> 0</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>Rotor_li</object-name>
+  <condition>
+   <less-than>
+    <property>/rotors/left/rpm</property>
+    <value>150</value>
+   </less-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>Rotor_re</object-name>
+  <condition>
+   <less-than>
+    <property>/rotors/right/rpm</property>
+    <value>150</value>
+   </less-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>Rotor_li_spin</object-name>
+  <condition>
+   <greater-than>
+    <property>/rotors/left/rpm</property>
+    <value>150</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>Rotor_re_spin</object-name>
+  <condition>
+   <greater-than>
+    <property>/rotors/right/rpm</property>
+    <value>150</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>Rotor_re</object-name>
+  <property>/rotors/right/rpm</property>
+  <factor>-1</factor>
+  <center>
+   <x-m>-1.4</x-m>
+   <y-m> 4.5</y-m>
+   <z-m> 2.0</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>Rotor_re_spin</object-name>
+  <property>/rotors/right/rpm</property>
+  <factor>-0.01</factor>
+  <center>
+   <x-m>-1.4</x-m>
+   <y-m> 4.5</y-m>
+   <z-m> 2.0</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>Rotor_li</object-name>
+  <property>/rotors/left/rpm</property>
+  <factor>1</factor>
+  <center>
+   <x-m>-1.4</x-m>
+   <y-m>-4.5</y-m>
+   <z-m> 2.0</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>Rotor_li_spin</object-name>
+  <property>/rotors/left/rpm</property>
+  <factor>0.01</factor>
+  <center>
+   <x-m>-1.4</x-m>
+   <y-m>-4.5</y-m>
+   <z-m> 2.0</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+ </animation>
+
+
+ <!-- rudder -->
+
+ <animation>
+  <type>rotate</type>
+  <object-name>Rudder</object-name>
+  <property>/surface-positions/rudder-pos-norm</property>
+  <factor>-15.0</factor> <!-- fixme -->
+  <center>
+   <x-m>3.62</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+ </animation>
+
+
+</PropertyList>
