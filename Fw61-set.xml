@@ -20,6 +20,17 @@ Dienstgipfelhoehe 3200 m
   <status>early production</status>
   <license>GPL v2</license>
 
+  <tags>
+      <tag>focke-wulf</tag>
+      <tag>helicopter</tag>
+      <tag>tail-dragger</tag>
+      <tag>fixed-gear</tag>
+      <tag>single-engine</tag>
+      <tag>prototype</tag>
+      <tag>1940s</tag>
+      <tag>ww2</tag>
+  </tags>
+
   <flight-model>yasim</flight-model>
   <aero>Fw61</aero>
   <fuel-fraction>0.8</fuel-fraction>
